@@ -50,7 +50,7 @@ const ClothResults: React.FC<ClothResultsProps> = ({ clothData }) => {
 
   useEffect(() => {
     if (clothData) {
-      const newRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {};
+      const newRefs: { [key: string]: React.MutableRefObject<HTMLDivElement | null> } = {};
       const newScrollStates: { [key: string]: ScrollState } = {};
 
       Object.keys(clothData.clothes).forEach(category => {
